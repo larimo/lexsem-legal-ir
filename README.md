@@ -54,14 +54,6 @@ The paper mentions an appendix available at `https://github.com/larimo/lexsem-le
     ```bash
     pip install -r requirements.txt
     ```
-
-## Running Experiments
-
-To run all models (lexical and dense) and evaluate them on the test set:
-```bash
-python -m scripts.run_experiments
-```
-
 ## Running Experiments
 
 The `scripts/` directory contains scripts to reproduce the experiments:
