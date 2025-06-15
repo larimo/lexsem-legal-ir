@@ -20,30 +20,46 @@ The paper mentions an appendix available at `https://github.com/larimo/lexsem-le
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/yourusername/lexsem-legal-ir.git](https://github.com/yourusername/lexsem-legal-ir.git)
-    cd lexsem-legal-ir
+    git clone [https://github.com/yourusername/cjeu-passage-retrieval.git](https://github.com/yourusername/cjeu-passage-retrieval.git)
+    cd cjeu-passage-retrieval
     ```
 
-2.  **Create a virtual environment and install dependencies:**
+2.  **Create a Project Directory for Data:**
+    Create a folder named `preprocessed` in the root of the project.
+    ```bash
+    mkdir preprocessed
+    ```
+
+3.  **Add Data Files:**
+    Place your data files (`unique_pars.csv`, `unique_cases.csv`, and `citations_cleaned.csv`) inside the `preprocessed` directory. The project structure should look like this:
+
+    ```
+    cjeu-passage-retrieval/
+    ├── preprocessed/
+    │   ├── unique_pars.csv
+    │   ├── unique_cases.csv
+    │   └── citations_cleaned.csv
+    ├── src/
+    ├── scripts/
+    └── ... (other files)
+    ```
+
+4.  **Create a Python virtual environment (recommended):**
     ```bash
     python -m venv venv
     source venv/bin/activate  # On Windows: venv\Scripts\activate
+    ```
+
+5.  **Install dependencies:**
+    ```bash
     pip install -r requirements.txt
     ```
 
-3.  **Download and preprocess the dataset:**
-    The dataset is based on `larimo/cjeu-paragraph-retrieval` from Hugging Face.
-    ```bash
-    python data/download_dataset.py
-    ```
-    You might need to set your Hugging Face token for direct download, or manually download and place it.
+## Running Experiments
 
-4.  **Configure API Keys (Optional):**
-    For OpenAI models, set your API key as an environment variable:
-    ```bash
-    export OPENAI_API_KEY="your_openai_api_key"
-    ```
-    Or modify `src/config.py`. The Nomic model might also require similar setup.
+To run all models (lexical and dense) and evaluate them on the test set:
+```bash
+python -m scripts.run_experiments
 
 ## Running Experiments
 
