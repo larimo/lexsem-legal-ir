@@ -60,6 +60,7 @@ The paper mentions an appendix available at `https://github.com/larimo/lexsem-le
 To run all models (lexical and dense) and evaluate them on the test set:
 ```bash
 python -m scripts.run_experiments
+```
 
 ## Running Experiments
 
