@@ -3,7 +3,7 @@
 This repository contains the code for the research paper investigating the performance of lexical and dense retrieval models for legal passage retrieval on Court of Justice of the European Union (CJEU) decisions. The paper analyzes when the formulaic citation structure of CJEU favors simpler statistical methods like BM25 over more complex dense models.
 
 ## Appendix
-The paper mentions an appendix available at `https://github.com/larimo/lexsem-legal-ir`. The Arxiv version with the paper appendix is available at [To be added].
+The Arxiv version with the paper's Appendix is available at https://arxiv.org/abs/2506.12895.
 
 ## Features
 
